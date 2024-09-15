@@ -32,6 +32,9 @@ jobs:
     # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
     # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
     - name: Setup Gradle
+      run: chmod +x gradlew 
+      
+    - name: Setup Gradle  
       uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
 
     - name: Build with Gradle Wrapper
@@ -41,10 +44,6 @@ jobs:
     - name: Setup Chrome
       uses: browser-actions/setup-chrome@v1.5.0
       
-    # Setup gradlew
-    # - name: Setup gradlew
-    #  run: chmod +x gradlew 
-
     # Execute gradle command for running cucumber API test
     - name: Execute API Test
       run: ./gradlew apiTest
