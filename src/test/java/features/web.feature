@@ -1,4 +1,4 @@
-Feature: Test web automation SauceDemo
+Feature: Test web automation DemoBlaze
 
   @web
   Scenario: Test Login Web
@@ -75,7 +75,7 @@ Feature: Test web automation SauceDemo
     Then User will see "Products" text
 
   @web
-  Scenario: Test Add Item to Cart (Not Logged In)
+  Scenario: Test Create Order
     Given Open web page
     And click product link for Samsung Galaxy S6
     And click Add to Cart button
